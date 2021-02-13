@@ -9,17 +9,20 @@
 
   <!-- Showcase -->
  
-  <section id="showcase">
-    <div class="container text-center">
-      <div class="home-search p-5">
-        <div class="overlay p-5">
-          <h1 class="display-4 mb-4">
-            Property Searching Just Got So Easy
-          </h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-            voluptatum tempore! Consectetur, id commodi!</p>
-          <div class="search">
-            <form action="{% url 'search' %}">
+       <!-- Banner Section One Start -->
+        <section class="banner-one"  style="padding-top: 77px;">
+            <div class="banner-bg-slide" 
+            style="background-image: url({% static 'img/showcase.jpg' %}); 
+            background-size: cover; background-repeat: no-repeat; opacity: 0.5;">
+            </div><!-- /.banner-bg-slide -->
+            <div class="container">
+                <div class="content-box">
+                    <div class="top-title">
+                        <h2>Find Your Future <br> Dream Home</h2>
+                    </div>
+          <div class="row">
+          <div class="col-md-8 col-sm-8 col-12">
+           <form action="{% url 'search' %}">
               <!-- Form Row 1 -->
               <div class="form-row">
                 <div class="col-md-4 mb-3">
@@ -62,16 +65,23 @@
                   </select>
                 </div>
               </div>
-              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+              <button class="thm-btn banner_one_search_btn" type="submit" style="width: 300px; font-size: 25px;">Search 
+              <span class="icon-magnifying-glass" style="font-weight: bold; margin-left: 20px; font-size: 20px;"></span></button>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br/>
-  <!-- Alerts -->
-  {% include 'partials/_alerts.html' %}
+            </div>
+            </div>
+
+                    <div class="banner_one_bottom_icon_text">
+                        <div class="banner_one_bottom_icon">
+                            <span class="icon-building"></span>
+                        </div>
+                        <div class="banner_one_bottom_text">
+                            <p>Smart Real Estate Services All our the World</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
   <!-- Listings -->
   <section id="listings" class="py-5">

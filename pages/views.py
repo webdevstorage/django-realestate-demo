@@ -37,3 +37,7 @@ def about(request):
     }
 
     return render(request, 'pages/about.html', context)
+
+# about is our about.html page.
+def contactus(request):
+    return render(request, 'pages/contact.html')

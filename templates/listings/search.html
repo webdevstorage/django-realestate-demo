@@ -9,7 +9,8 @@
   <section id="showcase-inner" class="showcase-search text-white py-5">
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-12">
+         <div class="row">
+          <div class="col-md-10 col-sm-11 col-12">
           <form action="{% url 'search' %}">
             <!-- Form Row 1 -->
             <div class="form-row">
@@ -67,8 +68,15 @@
                 </select>
               </div>
             </div>
-            <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+              
+               <div class="col-md-12 text-left" style="padding-left: 3px;">
+             <button class="thm-btn banner_one_search_btn" type="submit" style="width: 300px; font-size: 20px;">Search 
+                <span class="icon-magnifying-glass" style="font-weight: bold; margin-left: 20px; font-size: 18px;"></span>
+              </button>
+              </div>
           </form>
+          </div>
+          </div>
         </div>
       </div>
     </div>

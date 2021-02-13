@@ -183,7 +183,7 @@ li {
 }
 
 .bootstrap-select .dropdown-menu>li.active {
-    background: var(--thm-primary);
+    background: var(--thm-primary) !important;
     color: #fff;
 }
 
@@ -781,21 +781,6 @@ li {
 }
 
 .main-nav__main-navigation .main-nav__navigation-box>li>a:hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 7px;
-    background: var(--thm-primary);
-    content: "";
-    transform: scaleX(0.5);
-    opacity: 0;
-    transition: all 500ms ease;
-    z-index: -1;
-}
-
-.main-nav__main-navigation .main-nav__navigation-box>li.active {
     position: absolute;
     top: 0;
     left: 0;

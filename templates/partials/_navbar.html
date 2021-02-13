@@ -20,7 +20,7 @@
                         <div class="header_top_one_content_box float-right">
                             <div class="header_top_one_content_box_top clearfix">
                                 <div class="header_top_one_content_box_top_left float-left">
-                                    <p>Welcome to FindHome Real Estate</p>
+                                    <p>Welcome to Real Estate</p>
                                 </div>
                                 <div class="header_top_one_content_box_top_right float-right">
                                     <ul class="list-unstyled header_top_one_content_box_top_right_list">
@@ -121,6 +121,17 @@
                                             {% endif %}
                                             >
                                               <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
+                                            </li>
+
+
+                                            <li 
+                                            {% if 'contact' in request.path %}
+                                              class="nav-item active mr-3"
+                                            {% else %}
+                                              class="nav-item not-active mr-3"
+                                            {% endif %}
+                                            >
+                                              <a class="nav-link" href="{% url 'contactus' %}">Contact</a>
                                             </li>
                                             </ul><!-- /.sub-menu -->
                                       

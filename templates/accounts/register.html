@@ -16,7 +16,7 @@
             </div>
             <div class="card-body">
                 <!-- ALERTS -->
-                {% include 'partials/_alerts.html' %}
+               
                 <form action="{% url 'register' %}" method="POST">
                         {% csrf_token %}
                   <div class="form-group">
@@ -44,7 +44,9 @@
                   <input type="password" name="password2" class="form-control" required>
                 </div>
                 <input type="submit" value="Register" class="btn btn-secondary btn-block">
+
               </form>
+              {% include 'partials/_alerts.html' %}
             </div>
           </div>
         </div>
