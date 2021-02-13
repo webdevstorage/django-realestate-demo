@@ -79,12 +79,23 @@
                                     <i class="fa fa-bars"></i>
                                 </a>
                                 <div class="main-nav__main-navigation one clearfix">
-                                    <ul class=" main-nav__navigation-box float-left">
+                                    <ul class="main-nav__navigation-box float-left">
+                                       <style>
+                                          .main-nav__navigation-box .nav-item.active .nav-link {
+                                            background: #62cec5 !important;
+                                            color: #fff !important;
+                                          }
+
+                                          .main-nav__navigation-box .nav-item.not-active.nav-link {
+                                            background: #ffffff !important;
+                                            color: #333333 !important;
+                                          }
+                                       </style>
                                          <li 
-                                          {% if '/' == request.path %}
+                                          {% if request.get_full_path == "/" %}
                                             class="nav-item active mr-3"
                                           {% else %}
-                                            class="nav-item mr-3"
+                                            class="nav-item not-active mr-3"
                                           {% endif %}
                                         >
                                             <a class="nav-link" href="{% url 'index' %}">Home</a>
@@ -95,7 +106,7 @@
                                             {% if 'about' in request.path %}
                                               class="nav-item active mr-3"
                                             {% else %}
-                                              class="nav-item mr-3"
+                                              class="nav-item not-active mr-3"
                                             {% endif %}
                                             >
                                               <a class="nav-link" href="{% url 'about' %}">About</a>
@@ -106,7 +117,7 @@
                                             {% if 'listings' in request.path %}
                                               class="nav-item active mr-3"
                                             {% else %}
-                                              class="nav-item mr-3"
+                                              class="nav-item not-active mr-3"
                                             {% endif %}
                                             >
                                               <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
@@ -123,8 +134,10 @@
                       style="list-style: none;">
                       <style>
                       .list-inline-item a {
+                        background: white !important;
                         color: #454545 !important;
-                        padding-top: 24px;
+                        margin-top: 15px;
+                        border-radius: 6px;
                       }
 
                       .list-inline-item a:hover {
@@ -139,7 +152,7 @@
                   <li {% if 'dashboard' in request.path %}
                   class="nav-item list-inline-item active mr-3"
                 {% else %}
-                  class="nav-item list-inline-item mr-3"
+                  class="nav-item list-inline-item not-active mr-3"
                 {% endif %}>
                     <a class="nav-link" href="{% url 'dashboard' %}">
                      Welcome {{user.username}} (Dashboard)</a>
@@ -160,7 +173,7 @@
                   <li {% if 'register' in request.path %}
                   class="nav-item list-inline-item active mr-3"
                 {% else %}
-                  class="nav-item list-inline-item mr-3"
+                  class="nav-item list-inline-item not-active mr-3"
                 {% endif %}>
                     <a class="nav-link" href="{% url 'register' %}">
                       <i class="fas fa-user-plus"></i> Register</a>
@@ -168,7 +181,7 @@
                   <li {% if 'login' in request.path %}
                   class="nav-item list-inline-item active mr-3"
                 {% else %}
-                  class="nav-item list-inline-item mr-3"
+                  class="nav-item list-inline-item not-active mr-3"
                 {% endif %}>
                     <a class="nav-link" href="{% url 'login' %}">
                       <i class="fas fa-sign-in-alt"></i>
