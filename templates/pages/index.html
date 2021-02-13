@@ -98,7 +98,7 @@
           {% for listing in listings %}
 
 
-          <div class="col-md-6 col-lg-4 col-12 mb-4" style="padding: 0px;">
+          <div class="col-md-6 col-lg-4 col-12 mb-4" style="padding: 10px;">
               <a href="{% url 'listing' listing.id %}">
               <div class="card listing-preview latest_properties_content" style="padding: 12px;">
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
