@@ -83,17 +83,24 @@
             </div>
         </section>
 
-  <!-- Listings -->
-  <section id="listings" class="py-5">
-    <div class="container">
-      <h3 class="text-center mb-3">Latest Listings</h3>
-      <div class="row">
-        {% if listings %}
+
+
+  <!--Latest Properties Start-->
+        <section class="latest_properties bg-light">
+            <div class="container">
+                <div class="block-title text-center">
+                    <h4>Browse Hot Offers</h4>
+                    <h2>Latest Properties</h2>
+                </div>
+                <div class="row">
+
+   {% if listings %}
           {% for listing in listings %}
 
 
-          <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
+          <div class="col-md-6 col-lg-4 col-12 mb-4" style="padding: 0px;">
+              <a href="{% url 'listing' listing.id %}">
+              <div class="card listing-preview latest_properties_content" style="padding: 12px;">
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
@@ -102,37 +109,40 @@
                 </div>
                 <div class="card-body">
                   <div class="listing-heading text-center">
-                    <h4 class="text-primary">{{ listing.title }}</h4>
-                    <p>
-                      <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} 
+                    <h4 class="text-primary"><strong>{{ listing.title }}</strong></h4><br>
+                    <p><i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} 
                       {{ listing.state }}, {{ listing.zipcode }}</p>
                   </div>
                   <hr>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
+                      <span class="icon-square-measument"
+                      style="margin-right: 10px;"></span> Sqft: {{ listing.sqft }}</div>
                     <div class="col-6">
-                      <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
+                      <i class="fas fa-car"
+                      style="margin-right: 10px;"></i> Garage: {{ listing.garage }}</div>
                   </div>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
-                      <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}</div>
+                      <span class="icon-bed"
+                      style="margin-right: 10px;"></span> Bedrooms: {{ listing.bedrooms }}</div>
                     <div class="col-6">
-                      <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}</div>
+                      <span class="icon-shower"
+                      style="margin-right: 10px;"></span> Bathrooms: {{ listing.bathrooms }}</div>
                   </div>
                   <hr>
                   <div class="row py-2 text-secondary">
                     <div class="col-6">
-                      <i class="fas fa-user"></i> {{ listing.realtor }}</div>
-                  </div>
-                  <div class="row text-secondary pb-2">
+                      Reaeltor: {{ listing.realtor }}</div>
                     <div class="col-6">
-                      <i class="fas fa-clock"></i> {{ listing.list_date | timesince}}</div>
+                      List date: {{ listing.list_date | timesince}}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                  <a href="{% url 'listing' listing.id %}" 
+                  class="btn btn-primary btn-block" style="cursor: pointer;">More Info</a>
                 </div>
               </div>
+              </a>
             </div>
 
           {% endfor %}
@@ -143,9 +153,18 @@
         {% endif %}
 
 
-      </div>
-    </div>
-  </section>
+
+
+                 
+                              
+                    
+
+                        
+                </div>
+               
+            </div>
+        </section>
+        <!--Latest Properties End-->
 
   
         <!--Why Choose One Start-->
@@ -153,6 +172,8 @@
             style="background-image: url(assets/images/backgrounds/why_choose_one_bg.jpg)">
             <div class="container">
                 <div class="why_choose_one_title">
+                <br>
+                <br>
                     <h2>Why Choose Us</h2>
                 </div>
                 <div class="why_choose_one_shape_one"
@@ -211,6 +232,7 @@
             </div>
             <div class="container">
                 <div class="block-title text-center">
+                <br><br>
                     <h4>How It Works</h4>
                     <h2>Follow Easy Steps</h2>
                 </div>
@@ -219,7 +241,8 @@
                         <ul class="how_it_works_single list-unstyled">
                             <li>
                                 <div class="how_it_works_img">
-                                    <img src="{% static 'images/resources/how_it_works_img_1.png' %}" alt="">
+                                    <img src="{% static 'img/house3.jpeg' %}" alt=""
+                                    style="width: 182px; height: 182px;">
                                     <div class="how_it_works_circle">
                                         <p>01</p>
                                     </div>
@@ -231,7 +254,8 @@
                             </li>
                             <li class="item-2">
                                 <div class="how_it_works_img">
-                                    <img src="{% static 'images/resources/how_it_works_img_2.png' %}" alt="">
+                                    <img src="{% static 'img/house4.jpeg' %}" alt=""
+                                    style="width: 162px; height: 162px;">
                                     <div class="how_it_works_circle">
                                         <p>02</p>
                                     </div>
@@ -243,7 +267,8 @@
                             </li>
                             <li>
                                 <div class="how_it_works_img">
-                                    <img src="{% static 'images/resources/how_it_works_img_3.png' %}" alt="">
+                                    <img src="{% static 'img/keys.jpg' %}" alt=""
+                                    style="width: 182px; height: 182px;">
                                     <div class="how_it_works_circle">
                                         <p>03</p>
                                     </div>
@@ -255,7 +280,8 @@
                             </li>
                             <li class="item-4">
                                 <div class="how_it_works_img">
-                                    <img src="{% static 'images/resources/how_it_works_img_4.png' %}" alt="">
+                                    <img src="{% static 'img/happy.jpg' %}" alt=""
+                                    style="width: 162px; height: 162px;">
                                     <div class="how_it_works_circle">
                                         <p>04</p>
                                     </div>

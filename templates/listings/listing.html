@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 
 {% load humanize %}
+{% load static %}
 
 {% block title %} | {{ listing.title }}{% endblock %}
 
 {% block content %} 
-  <section id="showcase-inner" class="py-5 text-white">
+  <section id="showcase-inner" class="py-5 text-white"
+  style="background-image: url({% static 'img/house2.jpeg' %});
+  background-size: cover; 
+  background-repeat: no-repeat;">
         <div class="container">
           <div class="row text-center">
             <div class="col-md-12">
-              <h1 class="display-4">{{ listing.title }}</h1>
+              <h3 style="font-weight: bold;">{{ listing.title }}</h3><br>
               <p class="lead">
                 <i class="fas fa-map-marker"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
             </div>

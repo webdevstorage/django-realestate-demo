@@ -5,10 +5,13 @@
 {% block title %} | Register{% endblock %}
 
 {% block content %} 
+
   <section id="register" class="bg-light py-5">
+   <br>
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto">
+           {% include 'partials/_alerts.html' %} <br>
           <div class="card">
             <div class="card-header bg-primary text-white">
               <h4>
@@ -46,12 +49,13 @@
                 <input type="submit" value="Register" class="btn btn-secondary btn-block">
 
               </form>
-              {% include 'partials/_alerts.html' %}
+           
             </div>
           </div>
+        
         </div>
       </div>
     </div>
   </section>
-
+ <br> <br> <br>
   {% endblock %}

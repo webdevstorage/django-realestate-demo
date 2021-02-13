@@ -69,7 +69,7 @@ def logout(request):
         # just call auth.logout function here.... pass in data from request.
         auth.logout(request)
         messages.success(request, 'You are now logged out')
-        return redirect('index')
+        return redirect('login')
 
 def dashboard(request):
     if not request.user.is_authenticated:

@@ -34,17 +34,13 @@
                                     <h3>Explore</h3>
                                 </div>
                                 <ul class="footer_widget__explore_list list-unstyled">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Add Properties</a></li>
-                                    <li><a href="#">Pricing Packages</a></li>
-                                    <li><a href="#">Bookmarks</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'listings' %}">Featured Listings</a></li>
+                                    <li><a href="{% url 'search' %}">Search Listings</a></li>
                                 </ul>
                                 <ul class="footer_widget__explore_list two list-unstyled">
                                     <li><a href="#">Our Agents</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="{% url 'contactus' %}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

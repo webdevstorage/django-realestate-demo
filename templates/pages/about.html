@@ -25,54 +25,35 @@
   <section id="about" class="py-4">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-          <h2>We Search For The Perfect Home</h2>
+        <div class="col-md-12">
+          <h3>We Search For The Perfect Home</h3><br>
+          
           <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
           <img src="{% static 'img/about.jpg' %}" alt="">
           <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
             neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
-            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
-        </div>
-        <div class="col-md-4">
-           <!--- CHECK IF THERE'S REALTOR OBJECT PASSED TO VIEWS --->
-          {% if mvp_realtors %}
-            {% for realtor in mvp_realtors %}
-            <div class="card">
-                <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
-                <div class="card-body">
-                  <h5 class="card-title">Seller Of The Month</h5>
-                  <h6 class="text-secondary">{{ realtor.name }}</h6>
-                  <p class="card-text"> {{ realtor.description }}
-                  </p>
-                </div>
-              </div>
-            {% endfor %}
-        
-          {% endif %}
-         
-        </div>
-      </div>
-    </div>
-  </section>
+            commodi id libero eveniet harum perferendis laborum molestias quia.</p><br>
 
-  <!-- Work -->
-  <section id="work" class="bg-dark text-white text-center">
-    <h2 class="display-4">We Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
-    <hr>
-    <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
-  </section>
+             <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-md">
+             View Our Featured Listings</a>
+        </div>
+
+        </div>
+        </div>
+      </section>
+
 
   <!-- Team -->
-  <section id="team" class="py-5">
+  <section id="team" class="bg-light py-5">
     <div class="container">
-      <h2 class="text-center">Our Team</h2>
+      <h3 class="text-center"><strong>Our Team</strong></h3><br><br>
       <div class="row text-center">
 
         {% if realtors %}
           {% for realtor in realtors %}
           <div class="col-md-4">
-              <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
+              <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-4"
+              style="max-width: 250px;">
               <h4>{{ realtor.name }}</h4>
               <p class="text-success">
                 <i class="fas fa-award text-success mb-3"></i> Realtor</p>
