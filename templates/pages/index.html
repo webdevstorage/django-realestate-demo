@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% load humanize %}
-
+{% load static %}
 {% block title %} | Welcome{% endblock %}
 
 {% block content %} 
@@ -137,32 +137,128 @@
     </div>
   </section>
 
-  <section id="services" class="py-5 bg-secondary text-white">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4">
-          <i class="fas fa-comment fa-4x mr-4"></i>
-          <hr>
-          <h3>Consulting Services</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
-        </div>
-        <div class="col-md-4">
-          <i class="fas fa-home fa-4x mr-4"></i>
-          <hr>
-          <h3>Propery Management</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
-        </div>
-        <div class="col-md-4">
-          <i class="fas fa-suitcase fa-4x mr-4"></i>
-          <hr>
-          <h3>Renting & Selling</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+        <!--Why Choose One Start-->
+        <section class="why_choose_one jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+            style="background-image: url(assets/images/backgrounds/why_choose_one_bg.jpg)">
+            <div class="container">
+                <div class="why_choose_one_title">
+                    <h2>Why Choose Us</h2>
+                </div>
+                <div class="why_choose_one_shape_one"
+                    style="background-image: url(assets/images/shapes/why_choose_one_shape_1.png)"></div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <!--Why Choose One Single-->
+                        <div class="why_choose_one_single wow fadeInUp">
+                            <div class="why_choose_one_icon">
+                                <span class="icon-town"></span>
+                            </div>
+                            <h3>Find Your <br> Dream Home</h3>
+                            <p>There many variation of <br> pasages of lorem sum<br> available.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <!--Why Choose One Single-->
+                        <div class="why_choose_one_single wow fadeInUp" data-wow-delay="100ms">
+                            <div class="why_choose_one_icon">
+                                <span class="icon-agent"></span>
+                            </div>
+                            <h3>Experienced <br> Agents</h3>
+                            <p>There many variation of <br> pasages of lorem sum<br> available.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <!--Why Choose One Single-->
+                        <div class="why_choose_one_single wow fadeInUp" data-wow-delay="200ms">
+                            <div class="why_choose_one_icon">
+                                <span class="icon-assets"></span>
+                            </div>
+                            <h3>Buy or Rent <br> Homes</h3>
+                            <p>There many variation of <br> pasages of lorem sum<br> available.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <!--Why Choose One Single-->
+                        <div class="why_choose_one_single wow fadeInUp" data-wow-delay="300ms">
+                            <div class="why_choose_one_icon">
+                                <span class="icon-rent"></span>
+                            </div>
+                            <h3>List Your <br> Own Property</h3>
+                            <p>There many variation of <br> pasages of lorem sum<br> available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+         <!--How It Works Start-->
+        <section class="how_it_works">
+            <div class="how_it_works_shape_1">
+                <img src="{% static 'images/shapes/how_it_works_shape_1.png' %}" alt="">
+            </div>
+            <div class="container">
+                <div class="block-title text-center">
+                    <h4>How It Works</h4>
+                    <h2>Follow Easy Steps</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="how_it_works_single list-unstyled">
+                            <li>
+                                <div class="how_it_works_img">
+                                    <img src="{% static 'images/resources/how_it_works_img_1.png' %}" alt="">
+                                    <div class="how_it_works_circle">
+                                        <p>01</p>
+                                    </div>
+                                </div>
+                                <div class="how_it_works_content">
+                                    <h3>Find Real Estate</h3>
+                                    <p>Quisqu tell us risus adpis viera bibe um urna.</p>
+                                </div>
+                            </li>
+                            <li class="item-2">
+                                <div class="how_it_works_img">
+                                    <img src="{% static 'images/resources/how_it_works_img_2.png' %}" alt="">
+                                    <div class="how_it_works_circle">
+                                        <p>02</p>
+                                    </div>
+                                </div>
+                                <div class="how_it_works_content">
+                                    <h3>Find Real Estate</h3>
+                                    <p>Quisqu tell us risus adpis viera bibe um urna.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="how_it_works_img">
+                                    <img src="{% static 'images/resources/how_it_works_img_3.png' %}" alt="">
+                                    <div class="how_it_works_circle">
+                                        <p>03</p>
+                                    </div>
+                                </div>
+                                <div class="how_it_works_content">
+                                    <h3>Take Your Keys</h3>
+                                    <p>Quisqu tell us risus adpis viera bibe um urna.</p>
+                                </div>
+                            </li>
+                            <li class="item-4">
+                                <div class="how_it_works_img">
+                                    <img src="{% static 'images/resources/how_it_works_img_4.png' %}" alt="">
+                                    <div class="how_it_works_circle">
+                                        <p>04</p>
+                                    </div>
+                                </div>
+                                <div class="how_it_works_content">
+                                    <h3>Live Happily</h3>
+                                    <p>Quisqu tell us risus adpis viera bibe um urna.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 {% endblock %}

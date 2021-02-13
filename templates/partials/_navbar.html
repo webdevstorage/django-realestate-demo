@@ -1,55 +1,150 @@
    {% load static %}
-   <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-            <div class="container">
-              <a class="navbar-brand" href="{% url 'index' %}">
-                
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav">
-                  <li 
-                  {% if '/' == request.path %}
-                    class="nav-item active mr-3"
-                  {% else %}
-                    class="nav-item mr-3"
-                  {% endif %}
-                >
-                    <a class="nav-link" href="{% url 'index' %}">Home</a>
-                  </li>
-                  <li 
-                  {% if 'about' in request.path %}
-                    class="nav-item active mr-3"
-                  {% else %}
-                    class="nav-item mr-3"
-                  {% endif %}
-                  >
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
-                  </li>
-                  <li 
-                  {% if 'listings' in request.path %}
-                    class="nav-item active mr-3"
-                  {% else %}
-                    class="nav-item mr-3"
-                  {% endif %}
-                  >
-                    <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
-                  </li>
-                </ul>
-        
-                <ul class="navbar-nav ml-auto">
-                  {% if user.is_authenticated %}
+
+
+
+   <div class="site-header__header-one-wrap clearfix">
+
+            <div class="header_top_one">
+                <div class="container">
+                    <div class="header_top_one_inner clearfix">
+                        <div class="header_top_one_logo_box float-left">
+                            <div class="header_top_one_logo" style="padding-top: 60px;">
+                                <a href="{% url 'index' %}">
+                                <i class="fas fa-home" style="font-size: 40px; display: inline-block;
+                                margin-right: 10px;"></i> 
+                                <h3 style="color: #121212; font-size: 35px; 
+                                font-weight: bold; display: inline-block;">FindHome</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header_top_one_content_box float-right">
+                            <div class="header_top_one_content_box_top clearfix">
+                                <div class="header_top_one_content_box_top_left float-left">
+                                    <p>Welcome to FindHome Real Estate</p>
+                                </div>
+                                <div class="header_top_one_content_box_top_right float-right">
+                                    <ul class="list-unstyled header_top_one_content_box_top_right_list">
+                                        <li><a href="#">Support<span>/</span></a></li>
+                                        <li><a href="#">Wish List<span>/</span></a></li>
+                                        <li><a href="#">My Account</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header_top_one_content_box_bottom">
+                                <div class="header_top_one_content_box_bottom_inner clearfix">
+                                    <div class="header_top_one_content_box_bottom__social_box">
+                                        <div class="header_top_one_content_box_bottom__social">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="header_top_one_content_box_bottom_contact_info">
+                                        <ul class="header_top_one_content_box_bottom_contact_info_list list-unstyled">
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-phone-call"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Call Agent</p>
+                                                    <a href="tel:8888888888">888-888-8888</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-message"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Send Email</p>
+                                                    <a href="mailto:info@findhome.com">info@findhome.com</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="main-nav__header-one">
+                <div class="container">
+                    <nav class="header-navigation one stricky">
+                        <div class="container-box clearfix">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="main-nav__left main-nav__left_one float-left">
+                                <a href="#" class="side-menu__toggler">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <div class="main-nav__main-navigation one clearfix">
+                                    <ul class=" main-nav__navigation-box float-left">
+                                         <li 
+                                          {% if '/' == request.path %}
+                                            class="nav-item active mr-3"
+                                          {% else %}
+                                            class="nav-item mr-3"
+                                          {% endif %}
+                                        >
+                                            <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                          </li>
+
+
+                                           <li 
+                                            {% if 'about' in request.path %}
+                                              class="nav-item active mr-3"
+                                            {% else %}
+                                              class="nav-item mr-3"
+                                            {% endif %}
+                                            >
+                                              <a class="nav-link" href="{% url 'about' %}">About</a>
+                                            </li>
+
+
+                                            <li 
+                                            {% if 'listings' in request.path %}
+                                              class="nav-item active mr-3"
+                                            {% else %}
+                                              class="nav-item mr-3"
+                                            {% endif %}
+                                            >
+                                              <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
+                                            </li>
+                                            </ul><!-- /.sub-menu -->
+                                      
+                                       
+                                       
+                                </div><!-- /.navbar-collapse -->
+                            </div>
+                            <div class="main-nav__right main-nav__right_one float-right">
+
+                      <ul class=" main-nav__navigation-box list-inline float-right" 
+                      style="list-style: none;">
+                      <style>
+                      .list-inline-item a {
+                        color: #454545 !important;
+                        padding-top: 24px;
+                      }
+
+                      .list-inline-item a:hover {
+                        opacity: 0.7;
+                      }
+
+                      .list-inline-item i {
+                        margin-right: 9px;
+                      }
+                      </style>
+            {% if user.is_authenticated %}
                   <li {% if 'dashboard' in request.path %}
-                  class="nav-item active mr-3"
+                  class="nav-item list-inline-item active mr-3"
                 {% else %}
-                  class="nav-item mr-3"
+                  class="nav-item list-inline-item mr-3"
                 {% endif %}>
                     <a class="nav-link" href="{% url 'dashboard' %}">
                      Welcome {{user.username}} (Dashboard)</a>
                   </li>
-                  <li class="nav-item mr-3">
+                  <li class="nav-item list-inline-item mr-3">
                     <a class="nav-link" 
                     href="javascript:{document.getElementById('logout').submit()}">
                     <i class="fas fa-sign-out-alt"></i>
@@ -63,27 +158,31 @@
                   {% else %}
 
                   <li {% if 'register' in request.path %}
-                  class="nav-item active mr-3"
+                  class="nav-item list-inline-item active mr-3"
                 {% else %}
-                  class="nav-item mr-3"
+                  class="nav-item list-inline-item mr-3"
                 {% endif %}>
                     <a class="nav-link" href="{% url 'register' %}">
                       <i class="fas fa-user-plus"></i> Register</a>
                   </li>
                   <li {% if 'login' in request.path %}
-                  class="nav-item active mr-3"
+                  class="nav-item list-inline-item active mr-3"
                 {% else %}
-                  class="nav-item mr-3"
+                  class="nav-item list-inline-item mr-3"
                 {% endif %}>
                     <a class="nav-link" href="{% url 'login' %}">
                       <i class="fas fa-sign-in-alt"></i>
-        
                       Login</a>
                   </li>
 
                   {% endif %}
-                </ul>
-              </div>
-            </div>
-          </nav>
-    
+
+                  </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+
