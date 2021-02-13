@@ -56,7 +56,6 @@ def login(request):
             # 2 log-in a user. so authenticate first to check if user credential is valid. 
             # if so, login a user -- IMPORTANT ---
             auth.login(request, user)
-            messages.success(request, 'You are now logged in')
             return redirect('dashboard')
         else: 
             messages.error(request, 'Invalid credentials')
