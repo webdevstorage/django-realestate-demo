@@ -17,7 +17,7 @@
             <div class="card-body">
                 <!-- ALERTS -->
                 {% include 'partials/_alerts.html' %}
-                <form action="{% url 'account/create' %}" method="POST">
+                <form action="{% url 'register' %}" method="POST">
                         {% csrf_token %}
                   <div class="form-group">
                   <label for="first_name">First Name</label>
